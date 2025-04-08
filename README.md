@@ -29,7 +29,7 @@ A RESTful API for managing artists and their music releases, built with Cloudfla
 
 1. Access the repository:
 ```bash
-cd max-artists-api
+cd max-artists
 ```
 
 2. Install dependencies:
