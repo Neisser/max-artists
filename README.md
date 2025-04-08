@@ -27,7 +27,7 @@ A RESTful API for managing artists and their music releases, built with Cloudfla
 
 ## Installation
 
-1. Access the repository:
+1. Clone the repository and then access to it:
 ```bash
 cd max-artists
 ```
