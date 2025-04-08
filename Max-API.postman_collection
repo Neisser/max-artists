@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "1a5c98d3-3a2f-4e84-ade3-476fbf3cc6cb",
+		"name": "Max API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1773328"
+	},
+	"item": [
+		{
+			"name": "Create an Artist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Miochael jackson\",\r\n  \"bio\": \"90's rock sensation\",\r\n  \"genre\": \"Rock\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8787/artists",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8787",
+					"path": [
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Artist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8787/artists?genre=Indie+Pop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8787",
+					"path": [
+						"artists"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Indie+Pop"
+						},
+						{
+							"key": "genre",
+							"value": "rock",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "axl",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Release",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Breaking Free 2\",\r\n  \"release_date\": \"2025-04-01\",\r\n  \"status\": \"unreleased\",\r\n  \"genre\": \"Indie Pop\",\r\n  \"artist_id\": \"artist-47b7e93a-d1d2-4712-988b-888ee923b919\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8787/releases",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8787",
+					"path": [
+						"releases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Releases",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8787/releases?artist_id=artist-47b7e93a-d1d2-4712-988b-888ee923b919&genre=Indie+Pop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8787",
+					"path": [
+						"releases"
+					],
+					"query": [
+						{
+							"key": "artist_id",
+							"value": "artist_123",
+							"disabled": true
+						},
+						{
+							"key": "artist_id",
+							"value": "artist-47b7e93a-d1d2-4712-988b-888ee923b919"
+						},
+						{
+							"key": "genre",
+							"value": "Indie+Pop"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
